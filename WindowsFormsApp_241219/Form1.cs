@@ -20,15 +20,6 @@ namespace WindowsFormsApp_241219
             InitializeComponent();
 
             bool userInput = true;
-
-            /*if (PlayGame(userInput))
-            {
-                textBox_result.Text = "승리";
-            }
-            else
-            {
-                textBox_result.Text = "패배";
-            }*/
         }
 
         public bool PlayGame(bool userInput)
@@ -51,52 +42,17 @@ namespace WindowsFormsApp_241219
             {
                 if (bool.TryParse(input, out userInput))  // 입력값이 true/false인지 확인
                 {
-                    if (PlayGame(userInput))
-                    {
-                        ProcessInput(userInput);
-                    }
-                    else
-                    {
-                        textBox_result.Text = "true 또는 false를 입력하세요.";
-                    }
+                    ProcessInput(userInput);
                 }
                 else
                 {
-                    textBox_result.Text = "값을 선택하거나 입력하세요.";
+                    textBox_result.Text = "true 또는 false를 입력해주세요.";
                 }
             }
-            /*else
+            else
             {
-                // 라디오 버튼 값 처리
-                if (radioButton_true.Checked)
-                {
-                    userInput = true;
-                    if (PlayGame(userInput))
-                    {
-                        textBox_result.Text = "승리";
-                    }
-                    else
-                    {
-                        textBox_result.Text = "패배";
-                    }
-                }
-                else if (radioButton_false.Checked)
-                {
-                    userInput = false;
-                    if (PlayGame(userInput))
-                    {
-                        textBox_result.Text = "승리";
-                    }
-                    else
-                    {
-                        textBox_result.Text = "패배";
-                    }
-                }
-                else
-                {
-                    textBox_result.Text = "값을 선택하거나 입력하세요.";
-                }
-            }*/
+                textBox_result.Text = "입력값 또는 true/false를 선택해주세요.";
+            }
         }
 
         private void radioButton_true_Click(object sender, EventArgs e)
