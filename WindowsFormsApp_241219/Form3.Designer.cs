@@ -43,6 +43,7 @@
             // textBox_input
             // 
             this.textBox_input.Location = new System.Drawing.Point(13, 13);
+            this.textBox_input.Multiline = true;
             this.textBox_input.Name = "textBox_input";
             this.textBox_input.Size = new System.Drawing.Size(775, 28);
             this.textBox_input.TabIndex = 1;
